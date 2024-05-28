@@ -24,6 +24,7 @@ ArcGIS Online Dashboards provide various chart types, each with specific capabil
     - `Scrollbar`: Adds scrollbar for user to move along X-axis (on/off)
     - **Label Attributes**:
       - `Visibility`: Display or hide labels (on/off)
+      - `Size (px)`: Sets font size for labels
       - `Placement`: Selects label placement relavtive to the X-axis: default, staggered, rotated, wrapped
     - **Axis Attributes**:
       - `Color`: Selects color of axis
@@ -33,44 +34,127 @@ ArcGIS Online Dashboards provide various chart types, each with specific capabil
       - `Color`: Selects color of grid
       - `Opacity`: Selects opacity of grid (0.0-1.0)
       - `Thickness`: Selects thickness of grid (0-10)
+  - **Value Axis Attributes**:
+    - `Title`: Name of Y-axis
+    - `Title orientation`: Up or down
+    - `Title size (px)`: Selects title font size
+    - `Minimum value`: Selects minimum value on Y-axis
+    - `Maximum value`: Selects maximum value on Y-axis
+    - `Integers only`: Rounds Y-axis to whole numbers (on/off)
+    - `Logarithmic`: Puts Y-axis in logarithmic scale (on/off)
+    - **Label Attributes**:
+      - `Visibility`: Display or hide labels (on/off)
+      - `Size (px)`: Sets font size for labels
+      - **Value formatting**:
+        - `Style`: Decimal or Percent
+        - `Digit grouping`: Adds commas to grouped digits (on/off)
+        - `Minimum decimal places`: Minimum decimal places in Y-axis labels
+        - `Maximum decimal places`: Maximum decimal places in Y-axis labels
+        - `Value prefix/suffix`: Manually add prefix/suffix to Y-axis labels
+    - **Axis Attributes**:
+      - `Color`: Selects color of axis
+      - `Opacity`: Selects opacity of axis (0.0-1.0)
+      - `Thickness`: Selects thickness of axis (0-10)
+    - **Grid Attributes**:
+      - `Color`: Selects color of grid
+      - `Opacity`: Selects opacity of grid (0.0-1.0)
+      - `Thickness`: Selects thickness of grid (0-10)
+    - `Guides`: Provide context to the data being displayed on a chart by representing goals or thresholds. Guides can be lines that represent a single value or a shaded area that represents a range of values. In addition, serial charts can have multiple guides. 
+
 
 ##### Subtypes
-- **Multiple Line Chart**: Display multiple lines to compare trends between different data series.
-- **Stacked Line Chart**: Cumulative total of different data series over time.
-- **Area Line Chart**: Similar to a line chart but with the area under the line filled to highlight volume.
+- **Smoothed Line Chart**: Lines between points are smoothed to makes trends potentially more vizually appealing
 
 #### 2. Bar Chart
 - **Purpose**: Compare quantities across categories.
-- **Attributes**:
-  - `Title`: Chart title
-  - `Data`: Categorical data
-  - `Axes`: X-axis (categories) and Y-axis (values)
-  - `Series`: One or more data series
-  - `Styling`: Bar color and spacing
-
+- **Primary Attributes**:
+  - `Category field`: Selects Y-axis data (time or category)
+  - `Split by field`: Selects categorical data to be split 
+  - `Statistic`: Selects statistic for vizualization: count, average, minimun, maximum, sum, standarde deviation, percentile discrete, and percentile continuous
+  - `Field`: Selects the values for vizualization
+- **Presentation Attributes**:
+  - `Text color`: Selects text color
+  - `Font size (px)`: Selects font size
+  - `Orientation`: Selects horizontal or veritcal orientation
+  - `Legend placement`: Side, bottom, or hidden
+  - **Category Axis Attributes**:
+    - `Title`: Name of X-axis
+    - `Title size (px)`: Selects title font size
+    - `Scrollbar`: Adds scrollbar for user to move along X-axis (on/off)
+    - **Label Attributes**:
+      - `Visibility`: Display or hide labels (on/off)
+      - `Size (px)`: Sets font size for labels
+      - `Placement`: Selects label placement relavtive to the X-axis: default, staggered, rotated, wrapped
+    - **Axis Attributes**:
+      - `Color`: Selects color of axis
+      - `Opacity`: Selects opacity of axis (0.0-1.0)
+      - `Thickness`: Selects thickness of axis (0-10)
+    - **Grid Attributes**:
+      - `Color`: Selects color of grid
+      - `Opacity`: Selects opacity of grid (0.0-1.0)
+      - `Thickness`: Selects thickness of grid (0-10)
+  - **Value Axis Attributes**:
+    - `Title`: Name of Y-axis
+    - `Title orientation`: Up or down
+    - `Title size (px)`: Selects title font size
+    - `Minimum value`: Selects minimum value on Y-axis
+    - `Maximum value`: Selects maximum value on Y-axis
+    - `Integers only`: Rounds Y-axis to whole numbers (on/off)
+    - `Logarithmic`: Puts Y-axis in logarithmic scale (on/off)
+    - **Label Attributes**:
+      - `Visibility`: Display or hide labels (on/off)
+      - `Size (px)`: Sets font size for labels
+      - **Value formatting**:
+        - `Style`: Decimal or Percent
+        - `Digit grouping`: Adds commas to grouped digits (on/off)
+        - `Minimum decimal places`: Minimum decimal places in Y-axis labels
+        - `Maximum decimal places`: Maximum decimal places in Y-axis labels
+        - `Value prefix/suffix`: Manually add prefix/suffix to Y-axis labels
+    - **Axis Attributes**:
+      - `Color`: Selects color of axis
+      - `Opacity`: Selects opacity of axis (0.0-1.0)
+      - `Thickness`: Selects thickness of axis (0-10)
+    - **Grid Attributes**:
+      - `Color`: Selects color of grid
+      - `Opacity`: Selects opacity of grid (0.0-1.0)
+      - `Thickness`: Selects thickness of grid (0-10)
+    - `Guides`: Provide context to the data being displayed on a chart by representing goals or thresholds. Guides can be lines that represent a single value or a shaded area that represents a range of values. In addition, serial charts can have multiple guides. 
 ##### Subtypes
 - **Stacked Bar Chart**: Displays segments of data in stacked bars to show the total of different sub-categories.
-  - **Attributes**: Multiple data series, stack colors, and labels.
 - **100% Stacked Bar Chart**: Shows the relative percentage of each sub-category, summing to 100% for each category.
-  - **Attributes**: Multiple data series, normalized to 100%, stack colors, and labels.
-- **Clustered Bar Chart**: Places bars for each sub-category side by side for easy comparison.
-  - **Attributes**: Multiple data series, clustered bars, bar colors, and cluster spacing.
-- **Horizontal Bar Chart**: A variation of the bar chart with horizontal bars for better readability of long category labels.
-  - **Attributes**: Same as bar chart but with horizontal orientation.
 
 #### 3. Pie Chart
 - **Purpose**: Show proportions of a whole.
-- **Attributes**:
-  - `Title`: Chart title
-  - `Data`: Categorical data
-  - `Series`: One data series (values and categories)
-  - `Styling`: Slice colors and labels
+- **Primary Attributes**:
+  - `Category field`: Selects Y-axis data (time or category)
+  - `Statistic`: Selects statistic for vizualization: count, average, minimun, maximum, sum, standarde deviation, percentile discrete, and percentile continuous
+  - `Field`: Selects the values for vizualization
+- **Presentation Attributes**:
+  - `Text color`: Selects text color
+  - `Font size (px)`: Selects font size
+  - `Start angle`: Selects the first orientation
+  - `Inner radius`: Selects size of empty space in middle 
+  - **Label Attributes**:
+    - `Visibility`: Display or hide labels (Hide/Value/Percentage)
+    - `Labels offset (px)`: Sets lebel distance from chart
+    - `Label line opacity`: Selects opacity of label lines (0.0-1.0)
+  - `Legend`: Hide, Value, or Percentage
+  - **Value formatting**:
+  - `Style`: Decimal or Percent
+  - `Digit grouping`: Adds commas to grouped digits (on/off)
+  - `Minimum decimal places`: Minimum decimal places in Y-axis labels
+  - `Maximum decimal places`: Maximum decimal places in Y-axis labels
+  - `Value prefix/suffix`: Manually add prefix/suffix to Y-axis labels
+  - `Unit prefix`: Toggle unit prefix (on/off)
+  - **Percentage formatting**:
+  - `Digit grouping`: Adds commas to grouped digits (on/off)
+  - `Minimum decimal places`: Minimum decimal places in Y-axis labels
+  - `Maximum decimal places`: Maximum decimal places in Y-axis labels
+  -  `Value prefix/suffix`: Manually add prefix/suffix to Y-axis labels
 
 ##### Subtypes
 - **Doughnut Chart**: A variation of the pie chart with a hole in the center.
   - **Attributes**: Same as pie chart with additional styling for the doughnut hole.
-- **Exploded Pie Chart**: One or more slices are offset from the center to highlight particular segments.
-  - **Attributes**: Same as pie chart with the option to "explode" specific slices.
 
 #### 4. Scatter Plot
 - **Purpose**: Illustrate the relationship between two numerical variables.
@@ -165,27 +249,3 @@ XlsxWriter is a Python library used to create Excel files, including various typ
   - **Attributes**: Same as pie chart with additional styling for the doughnut hole.
 - **Exploded Pie Chart**: One or more slices are offset from the center to highlight particular segments.
   - **Attributes**: Same as pie chart with the option to "explode" specific slices.
-
-#### 5. Scatter Plot
-- **Purpose**: Shows relationships between two variables.
-- **Attributes**:
-  - `Title`: Chart title
-  - `Data`: Paired numerical data
-  - `Axes`: X-axis and Y-axis (both numerical)
-  - `Series`: One or more data series
-  - `Styling`: Point color, shape, and size
-
-##### Subtypes
-- **Bubble Chart**: A variation of the scatter plot where the size of the points indicates a third variable.
-  - **Attributes**: Similar to scatter plot with additional data series for bubble size.
-- **Scatter Plot with Lines**: Connects data points with lines to show trends.
-  - **Attributes**: Similar to scatter plot with line styling options.
-
-### Customization Options
-- **Chart Titles and Labels**: Add and customize titles, axis labels, and data labels.
-- **Legend Positioning**: Place legends in different positions around the chart.
-- **Data Series Formatting**: Customize the appearance of data series with colors, patterns, and markers.
-- **Axis Scaling and Formatting**: Adjust axis scales, gridlines, and formats (e.g., currency, percentage).
-- **Adding Trendlines**: Insert trendlines to highlight data trends.
-
-This README provides an overview of the chart possibilities in ArcGIS Online Dashboards and XlsxWriter, detailing basic types, subtypes, and customization options for effective data visualization.
