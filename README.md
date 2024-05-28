@@ -4,16 +4,35 @@
 
 ArcGIS Online Dashboards provide various chart types, each with specific capabilities and attributes. Here are the detailed possibilities and attributes for each type of chart and their subtypes.
 
-### Basic Chart Types
+### Basic Serial Chart Types
 
 #### 1. Line Chart
 - **Purpose**: Display data trends over time or categories.
-- **Attributes**:
-  - `Title`: Chart title
-  - `Data`: Time-series or categorical data
-  - `Axes`: X-axis (time or category) and Y-axis (values)
-  - `Series`: One or more data series
-  - `Styling`: Line color, markers, and line style
+- **Primary Attributes**:
+  - `Category field`: Selects Y-axis data (time or category)
+  - `Split by field`: Selects categorical data to be split 
+  - `Statistic`: Selects statistic for vizualization: count, average, minimun, maximum, sum, standarde deviation, percentile discrete, and percentile continuous
+  - `Field`: Selects the values for vizualization
+- **Presentation Attributes**:
+  - `Text color`: Selects text color
+  - `Font size (px)`: Selects font size
+  - `Orientation`: Selects horizontal or veritcal orientation
+  - `Legend placement`: Side, bottom, or hidden
+  - **Category Axis Attributes**:
+    - `Title`: Name of X-axis
+    - `Title size (px)`: Selects title font size
+    - `Scrollbar`: Adds scrollbar for user to move along X-axis (on/off)
+    - **Label Attributes**:
+      - `Visibility`: Display or hide labels (on/off)
+      - `Placement`: Selects label placement relavtive to the X-axis: default, staggered, rotated, wrapped
+    - **Axis Attributes**:
+      - `Color`: Selects color of axis
+      - `Opacity`: Selects opacity of axis (0.0-1.0)
+      - `Thickness`: Selects thickness of axis (0-10)
+    - **Grid Attributes**:
+      - `Color`: Selects color of grid
+      - `Opacity`: Selects opacity of grid (0.0-1.0)
+      - `Thickness`: Selects thickness of grid (0-10)
 
 ##### Subtypes
 - **Multiple Line Chart**: Display multiple lines to compare trends between different data series.
